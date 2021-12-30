@@ -1,0 +1,24 @@
+.kakaoimg {
+	margin: 10px;
+	width: 213px;
+	height: 284px;
+	cursor: pointer;
+}
+.kakao_img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap:wrap
+	
+}
+
+.nav-distance {
+	padding: 2.1% 7.7%;
+}
+
+.navbar-light .navbar-brand {
+	text-align: left;
+	line-height: 1.68;
+	font-family: NanumSquareR;
+	color: #35465d;
+}

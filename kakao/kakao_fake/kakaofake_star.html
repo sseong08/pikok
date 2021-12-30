@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<tittle>kakaofake</tittle>
+		<script src="kakao.js"></script>
+	</head>
+	<body>
+		<p>
+			<b>이제 창을 닫거나 뒤로 돌아가도 됩니다.</b>
+		</p>
+		<script>
+			//카카오톡 로그인과 이미지 메시지 전송 코드
+			Kakao.init('f528a75dfb4a7b0e0063aaddf859207d');
+			Kakao.Auth.login({
+				success: function (response) {
+					Kakao.API.request({
+						url: '/v2/user/me',
+						success: function (response) {
+							let nickname = response['properties']['nickname'];
+							Kakao.Link.sendCustom({
+								templateId: 59297,
+								templateArgs: {
+									title: nickname + '님이 선물과 메시지를 보냈습니다',
+									desc: '자세한 내용은 선물함에서 확인해주세요.',
+									img_url: 'https://hwanggu1.github.io/nion-cdn/starbucks2.png',
+									height: '200',
+									width: '700',
+									btn_url: 'https://gift.kakao.com/giftbox',
+								},
+							});
+						},
+						fail: function (error) {
+							console.log(error);
+						},
+					});
+				},
+				fail: function (error) {
+					console.log(error);
+				},
+			});
+		</script>
+	</body>
+</html>
