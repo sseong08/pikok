@@ -11,7 +11,7 @@ body {
 }
 
 .file-upload {
-	background-color: #ffffff;
+/* 	background-color: #ffffff;
 	width: 63vw;
 	/* margin: 0 auto; */
 	/* padding: 20px; */
@@ -20,7 +20,12 @@ body {
 	border-radius: 10px;
 	border: solid 1.5px #f6f7fa;
 	background-color: #f6f7fa;
-	padding: 10% 0;
+	padding: 10% 0; */
+	padding: 15% 3%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: solid 1.5px #f6f7fa;
+    background-color: #f6f7fa;
 }
 
 .file-upload-btn {
